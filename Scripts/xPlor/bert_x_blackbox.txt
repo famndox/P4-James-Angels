@@ -1,0 +1,218 @@
+import tensorflow as tf
+from transformers import BertTokenizer, TFBertModel
+import pandas as pd
+import numpy 
+import chardet
+from sklearn.preprocessing import LabelEncoder
+
+
+# Load pre-trained BERT model and tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = TFBertModel.from_pretrained('bert-base-uncased')
+
+# Load the CSV file
+#df = pd.read_csv('stories.csv')
+with open('stories.csv', 'rb') as f:
+    result = chardet.detect(f.read())
+charenc = result['encoding']
+
+df = pd.read_csv('stories.csv', encoding=charenc)
+
+# Split the data into training and validation sets
+train_size = int(0.8 * len(df))
+train_df, val_df = df[:train_size], df[train_size:]
+
+
+# Combine the training and validation title columns
+all_titles = pd.concat([train_df['Title'], val_df['Title']])
+
+# Create a label encoder
+le = LabelEncoder()
+
+# Fit the label encoder to all the unique titles
+le.fit(all_titles)
+
+# Convert the label data to integer indices
+train_labels = le.transform(train_df['Title'])
+val_labels = le.transform(val_df['Title'])
+
+
+
+# Create a dataset from the tokenized data
+train_dataset = tf.data.Dataset.from_tensor_slices((train_df['Story'], train_df['Title']))
+val_dataset = tf.data.Dataset.from_tensor_slices((val_df['Story'], val_df['Title']))
+
+# Map the dataset to tokenize the stories
+# Update the tokenize_story function to use the integer labels
+def tokenize_story(story, label):
+    @tf.autograph.experimental.do_not_convert
+    def tokenize_story_py(story, label):
+        tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+        story_value = story.numpy().decode('utf-8')  # Extract the string value from the tensor
+        inputs = tokenizer.encode_plus(
+            story_value,
+            add_special_tokens=True,
+            max_length=70,
+            padding='max_length',
+            truncation=True,
+            return_attention_mask=True,
+            return_tensors='tf'
+        )
+        input_ids = tf.reshape(inputs['input_ids'], (-1,))  # Flatten the input_ids tensor
+        attention_mask = tf.reshape(inputs['attention_mask'], (-1,))  # Flatten the attention_mask tensor
+        token_type_ids = tf.zeros_like(input_ids)  # Create a tensor of zeros for token_type_ids
+        return input_ids, attention_mask, token_type_ids, label
+
+    return tf.py_function(tokenize_story_py, [story, label], [tf.int32, tf.int32, tf.int32, tf.int32])
+
+# Update the dataset mapping to use the integer labels
+train_dataset = train_dataset.map(lambda x, y: tokenize_story(x, train_labels))
+val_dataset = val_dataset.map(lambda x, y: tokenize_story(x, val_labels))
+
+# Batch the dataset
+batch_size = 32
+train_dataset = train_dataset.batch(batch_size)
+val_dataset = val_dataset.batch(batch_size)
+
+
+# Compile model
+model.compile(optimizer='adam', loss='masked_language_modeling', metrics=["accuracy"])
+
+# Fit model
+#model.fit(train_dataset, epochs=10, validation_data=val_dataset)
+
+def custom_loss_fn(outputs, labels):
+    # Use the last hidden state as the output of the model
+    logits = outputs.last_hidden_state
+    loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True, reduction=tf.keras.losses.Reduction.SUM_OVER_BATCH_SIZE)
+    loss = loss_fn(labels, logits)
+    return loss
+
+# Create a custom training loop to handle the input format
+for epoch in range(10):
+    for batch in train_dataset:
+        input_ids, attention_mask, token_type_ids, labels = batch
+        labels = tf.argmax(labels, axis=-1)  # Remove the last dimension
+        with tf.GradientTape() as tape:
+            outputs = model(input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids, training=True)
+            loss = custom_loss_fn(outputs, labels)
+        gradients = tape.gradient(loss, model.trainable_variables)
+        optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+        print(f'Epoch {epoch+1}, Loss: {loss:.4f}')
+
+
+
+All this was like a mid-way point? Which is why it's commented out... 
+I don't think it's ultimately useful, the whole custom class thing is way too advanced.
+
+""" HISTORY, RIGHT? 
+import pandas as pd
+import numpy as np
+import chardet
+
+
+# Load the CSV file
+#df = pd.read_csv('stories.csv')
+with open('stories.csv', 'rb') as f:
+    result = chardet.detect(f.read())
+charenc = result['encoding']
+
+df = pd.read_csv('stories.csv', encoding=charenc)
+
+# Split the data into training and validation sets
+train_size = int(0.8 * len(df))
+train_df, val_df = df[:train_size], df[train_size:]
+
+# Create a function to tokenize the stories
+def tokenize_story(story):
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    inputs = tokenizer.encode_plus(
+        story,
+        add_special_tokens=True,
+        max_length=70,
+        padding='max_length',
+        truncation=True,
+        return_attention_mask=True,
+        return_tensors='tf'
+    )
+    return inputs
+
+# Tokenize the stories and assign labels
+train_tales = train_df['Story'].apply(tokenize_story)
+train_labels = train_df['Title']
+val_tales = val_df['Story'].apply(tokenize_story)
+val_labels = val_df['Title']
+
+# Convert the lists to NumPy arrays
+train_tales = np.array(train_tales.tolist())
+train_labels = np.array(train_labels)
+val_tales = np.array(val_tales.tolist())
+val_labels = np.array(val_labels)
+
+# Now you can use the train_tales, train_labels, val_tales, and val_labels variables in the original code
+"""
+
+"""
+
+class FolkloreTalesDataset(tf.data.Dataset):
+    def __init__(self, tales, labels):
+        self.tales = tales
+        self.labels = labels
+
+    def _create_dataset(self):
+        return tf.data.Dataset.from_tensor_slices((self.tales, self.labels)).map(
+            lambda x, y: (
+                tokenizer.encode_plus(
+                    x,
+                    add_special_tokens=True,
+                    max_length=70,
+                    padding='max_length',
+                    truncation=True,
+                    return_attention_mask=True,
+                    return_tensors='tf'
+                ),
+                y
+            )
+        )
+
+    def __getitem__(self, idx):
+        tale = self.tales[idx]
+        label = self.labels[idx]
+        inputs = tokenizer.encode_plus(
+            tale,
+            add_special_tokens=True,
+            max_length=70,
+            padding='max_length',
+            truncation=True,
+            return_attention_mask=True,
+            return_tensors='tf'
+        )
+        return inputs, label
+
+    def __len__(self):
+        return len(self.tales)
+
+    def __iter__(self):
+        for i in range(len(self)):
+            yield self[i]
+
+    def element_spec(self):
+        return (tf.TensorSpec(shape=(None,), dtype=tf.string), tf.TensorSpec(shape=(), dtype=tf.string))
+
+    def batch(self, batch_size, drop_remainder=False):
+        return super().batch(batch_size, drop_remainder)
+
+        """
+		
+		"""
+# Create dataset instances
+train_dataset = FolkloreTalesDataset(train_tales, train_labels)
+val_dataset = FolkloreTalesDataset(val_tales, val_labels)
+
+# Compile model
+model.compile(optimizer='adam', loss='masked_language_modeling', metrics=["accuracy"])
+
+# Fit model
+model.fit(train_dataset, epochs=10, validation_data=val_dataset)
+
+"""
