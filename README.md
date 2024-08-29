@@ -1,6 +1,8 @@
 # P4-Angels
 <img src="Resources/Images/angels.png" alt="angels" width="666"/>
 
+<a href='https://www.blackbox.ai/'>Blackbox AI</a>
+
 ## Concept
 Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story. The idea is large, and compiling takes time, so we’ve consolidated a few datasets together
  (found in blah blah blah) 
@@ -12,7 +14,7 @@ Consider the irony of using machine learning to interpret humanity’s Mythopoei
 	5. Format: .txt and .csv
 	6. Native American, Norse, Japanese, Babylonian, Hebrew, Maori…3. Char Count: 
 *  Small collection of Brothers Grimm
-	1. Courtesy of: <a href=’ https://www.cs.cmu.edu/’>Carnegie Mellon University</a> via <a href=’ https://hub.packtpub.com/tensorflow-lstm-that-writes-stories-tutorial/ ‘> <Packt>hub</a>
+	1. Courtesy of: <a href='https://www.cs.cmu.edu/'>Carnegie Mellon University</a> via <a href='https://hub.packtpub.com/tensorflow-lstm-that-writes-stories-tutorial/'><Packt>hub</a>
 	2. Transformation: see Artifacts for rip and zip scripts
 	3. Number of Stories: 100
 	4. Char Count: 914271
