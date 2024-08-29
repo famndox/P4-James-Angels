@@ -1,5 +1,6 @@
 # P4-Angels
 ![Header Image](Resources/Images/angels.png "Title Tile")
+<img src="Resources/Images/angels.png" alt="angels" width="200"/>
 =============================
 
 
