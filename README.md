@@ -1,6 +1,5 @@
 # P4-Angels
-<img src="Resources/Images/angels.png" alt="angels" width="700"/>
-=============================
+<img src="Resources/Images/angels.png" alt="angels" width="666"/>
 
 
 
