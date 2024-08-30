@@ -24,7 +24,7 @@ Consider the irony of using machine learning to interpret humanity’s Mythopoei
 	1. Courtesy of: <a href='https://www.kaggle.com/datasets/andrzejpanczenko/folk-tales-dataset'>Andrzej Panczenko on Kaggle</a>
 	2. Transformation: see Artifacts for rip and zip scripts
 	3. Number of Stories: 2838
-	4. Char Count: 
+	4. Char Count: 25797400
 	5. Format: .csv
 	6. Cultures: 65 referenced from Albanian to Zimbabwean
 [Keshia MAP]
