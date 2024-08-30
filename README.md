@@ -26,11 +26,14 @@ Consider the irony of using machine learning to interpret humanity’s Mythopoei
 	3. Number of Stories: 2838
 	4. Char Count: 
 	5. Format: .csv
-	6. Cultures: 57 referenced from Albanian to Zimbabwean
+	6. Cultures: 65 referenced from Albanian to Zimbabwean
+[Keshia MAP]
 
 
 
+## Building a Text Generator Model
 
+  
 
 
 ---
