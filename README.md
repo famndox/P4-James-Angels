@@ -1,5 +1,5 @@
 # P4-Angels
-<img src="Resources/Images/angels.png" alt="angels2" width="333"/>
+<img src="Resources/Images/angels2.png" alt="angels2" width="333"/>
 
 <a href='https://link_sample'>Copy Me</a>
 
