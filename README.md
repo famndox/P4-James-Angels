@@ -1,8 +1,5 @@
-# P4-Angels
 <img src="Resources/Images/angels2.png"/>
-
 <a href='https://link_sample'>Copy Me</a>
-
 ## Concept
 Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story. The idea is large, and compiling takes time, so we’ve consolidated a few datasets together. For the scale of this project, we're sampling folktales and brief myths; nothing of a narrative length.
  (found in blah blah blah) 
