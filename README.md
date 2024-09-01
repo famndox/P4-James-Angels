@@ -37,7 +37,6 @@ Consider the irony of using machine learning to interpret humanity’s Mythopoei
   
 ## Leveraging BERT and GPT-2 for Emotional Analysis and Text Generation
 
-#### Objectives for optimization
 - File Folder: .virtual_documents/just_exploring (Need to update and clear old files)
 #### Scope
 Sentiment Analysis: Utilize BERT to analyze the emotional content of a collection of folk tales.
