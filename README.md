@@ -79,6 +79,11 @@ The summary outputs highlight patterns in polarity and subjectivity across diffe
 -	5. Overall Significance
 The analysis in this notebook provides insights into the emotional and subjective nature of folk tales from various cultures. By classifying and analyzing these tales, the project sheds light on cultural storytelling traditions and their emotional impact.
 
+## Tableau Visualizations
+
+
+## References
+
 ---
 sharing, but so far just an attempt at a TensorFlow tutorial using RNN layer - https://www.tensorflow.org/text/tutorials/text_generation
 
