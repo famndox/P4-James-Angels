@@ -69,14 +69,14 @@ Understanding BERT and GPT-2: This project provided valuable insights into the s
 We aimed to explore the emotional tone and subjective nature of folk tales from various cultures around the world. By utilizing natural language processing (NLP) techniques, this part of the project analyzes the sentiment (polarity) and subjectivity of each tale. This analysis offers insights into the cultural storytelling traditions and the emotional impact of these stories, helping to uncover the common themes and differences across different nations' folk narratives.
 #### Findings
 -	1. Nations and Stories Classification
-The notebook classifies folk tales by their nation of origin. Examples include tales from Japanese, Serbian, German, French, and North American Native origins. This classification is crucial as it allows for cultural comparisons and understanding the diversity of sentiment across different folk traditions.
+The notebook classifies folk tales by their nation of origin. Classification allows for cultural comparisons and understanding the diversity of sentiment across different folk traditions.
 -	2. The sentiment analysis outputs provide the polarity and subjectivity of various folk tales. Polarity ranges from -1 (negative sentiment) to 1 (positive sentiment), while subjectivity indicates the degree to which the text is subjective or objective.
 For instance, the tale "Momotaro" from Japan has a positive polarity of approximately 0.24 and a moderate subjectivity of 0.45. This suggests that the story is somewhat positive and moderately subjective.
--	3. Data Table Summaries
+-	3. Data Table Summaries: 
 The data tables in the notebook contain columns such as source, nation, title, text, polarity, and subjectivity. These tables summarize the key attributes of the folk tales analyzed, including their emotional tone and the degree of personal opinion or factual content.
--	4. Polarity and Subjectivity Trends
+-	4. Polarity and Subjectivity Trends:
 The summary outputs highlight patterns in polarity and subjectivity across different nations. This can be significant for understanding the emotional and narrative styles prevalent in folk tales from different cultures.
--	5. Overall Significance
+-	5. Overall Significance:
 The analysis in this notebook provides insights into the emotional and subjective nature of folk tales from various cultures. By classifying and analyzing these tales, the project sheds light on cultural storytelling traditions and their emotional impact.
 
 ## Tableau
