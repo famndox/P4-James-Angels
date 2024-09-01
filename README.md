@@ -3,8 +3,14 @@
 <a href='https://link_sample'>Copy Me</a>
 
 ## Concept
-Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story. The idea is large, and compiling takes time, so we’ve consolidated a few datasets together. For the scale of this project, we're sampling folktales and brief myths; nothing of a narrative length.
- (found in blah blah blah) 
+Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story.  For the scale of this project, we're sampling folktales and brief myths; nothing of a narrative length.
+
+
+## Building a Text Generator Model
+
+#### Training Materials
+The idea is large, and compiling takes time, so we’ve consolidated a few datasets together which can be found in /Resources/Datasets:
+
 *  Tiny collection of creation myths
 	1. Courtesy of: Freely hosted, take a look using a <a href='https://railsback.org/CS/CSIndex.html'>Web View</a> or see the exact <a href='https://superpowerexperts.com/wp-content/uploads/2019/06/Creation-Stories-from-around-the-World.pdf'>PDF Link Used</a>
 	2. Transformation: manual
@@ -26,12 +32,16 @@ Consider the irony of using machine learning to interpret humanity’s Mythopoei
 	4. Char Count: 25797400
 	5. Format: .csv
 	6. Cultures: 65 referenced from Albanian to Zimbabwean
-[Keshia MAP]
 
+#### Model Progression
 
+We began with SCRATCH, which w an attempt at the TensorFlow tutorial, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   
+SCRATCH_FOLK was an attempt to perform the same RNN model on the largest dataset.
+In SCRATCHING, we’re forcing our dataset into Andrej Karpathy (@karpathy) Minimal character-level Vanilla RNN model which was what the above tutorial was ultimately based on. 
 
-## Building a Text Generator Model
+Scratching_folk was the same attempt using the more substantial training set. At least some of our keywords are showing up consistently. Of course you can see the results are still nonsense:
 
+Ultimately the best logged result came from the original grimm dataset towards the m’th iterations. Not bad for a little next character predictor. 
 
 
   
