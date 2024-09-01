@@ -59,8 +59,9 @@ Understanding BERT and GPT-2: This project provided valuable insights into the s
 - File Folder: Sentiment Files
 - Resource Used: <a href='https://www.kaggle.com/datasets/andrzejpanczenko/folk-tales-dataset'>Andrzej Panczenko on Kaggle</a>
 - Libraries imported: langdetect, wordcloud, seaborn, textblob, pycountry, pandas and matplotlib.pyplot
-- We aimed to explore the emotional tone and subjective nature of folk tales from various cultures around the world. By utilizing natural language processing (NLP) techniques, this part of the project analyzes the sentiment (polarity) and subjectivity of each tale. This analysis offers insights into the cultural storytelling traditions and the emotional impact of these stories, helping to uncover the common themes and differences across different nations' folk narratives.
-- Findings
+#### Scope
+We aimed to explore the emotional tone and subjective nature of folk tales from various cultures around the world. By utilizing natural language processing (NLP) techniques, this part of the project analyzes the sentiment (polarity) and subjectivity of each tale. This analysis offers insights into the cultural storytelling traditions and the emotional impact of these stories, helping to uncover the common themes and differences across different nations' folk narratives.
+#### Findings
 -	1. Nations and Stories Classification
 The notebook classifies folk tales by their nation of origin. Examples include tales from Japanese, Serbian, German, French, and North American Native origins. This classification is crucial as it allows for cultural comparisons and understanding the diversity of sentiment across different folk traditions.
 -	2. The sentiment analysis outputs provide the polarity and subjectivity of various folk tales. Polarity ranges from -1 (negative sentiment) to 1 (positive sentiment), while subjectivity indicates the degree to which the text is subjective or objective.
