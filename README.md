@@ -79,7 +79,7 @@ The summary outputs highlight patterns in polarity and subjectivity across diffe
 -	5. Overall Significance
 The analysis in this notebook provides insights into the emotional and subjective nature of folk tales from various cultures. By classifying and analyzing these tales, the project sheds light on cultural storytelling traditions and their emotional impact.
 
-## Tableau Visualizations
+## Tableau
 
 
 ## References
