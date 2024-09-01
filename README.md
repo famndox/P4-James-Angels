@@ -1,8 +1,4 @@
 <img src="Resources/Images/angels2.png"/>
-
-<a href='https://link_sample'>Copy Me</a>
-
-## Concept
 Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story.  For the scale of this project, we're sampling folktales and brief myths; nothing of a narrative length.
 
 
@@ -35,14 +31,14 @@ The idea is large, and compiling takes time, so we’ve consolidated a few datas
 
 #### Model Progression
 
-We began with SCRATCH, which w an attempt at the TensorFlow tutorial, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   
-SCRATCH_FOLK was an attempt to perform the same RNN model on the largest dataset.
-In SCRATCHING, we’re forcing our dataset into Andrej Karpathy (@karpathy) Minimal character-level Vanilla RNN model which was what the above tutorial was ultimately based on. 
-
-Scratching_folk was the same attempt using the more substantial training set. At least some of our keywords are showing up consistently. Of course you can see the results are still nonsense:
+We began with SCRATCH, which was an attempt at this <a href='https://www.tensorflow.org/text/tutorials/text_generation'>TensorFlow Tutorial</a>, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   <img src="Resources/Images/scratch_acc.png"/><img src="Resources/Images/scratch_one_step.png"/>
+SCRATCH_FOLK was an attempt to perform the same RNN model on the largest dataset with the same result. <img src="Resources/Images/tbd.png"/>
+In SCRATCHING, we’re forcing our dataset into Andrej Karpathy (@karpathy) Minimal character-level Vanilla RNN model which was what the above tutorial was ultimately based on. Scratching_folk was the same attempt using the more substantial training set. At least some of our keywords are showing up consistently. Of course you can see the results are still nonsense:
+* <img src="Resources/Images/sing_f_850k.png"/>
+* <img src="Resources/Images/sing_f_900k.png"/>
 
 Ultimately the best logged result came from the original grimm dataset towards the m’th iterations. Not bad for a little next character predictor. 
-
+* <img src="Resources/Images/sing_best.png"/>
 
   
 ## Leveraging BERT and GPT-2 for Emotional Analysis and Text Generation
@@ -93,6 +89,11 @@ The analysis in this notebook provides insights into the emotional and subjectiv
 
 
 ## References
+
+<a href='https://link_sample'>Copy Me</a>
+<a href=''>Copy Me</a>
+<a href=''>Copy Me</a>
+
 
 ---
 sharing, but so far just an attempt at a TensorFlow tutorial using RNN layer - https://www.tensorflow.org/text/tutorials/text_generation
