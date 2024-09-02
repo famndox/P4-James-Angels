@@ -1,4 +1,4 @@
-<img src="Resources/Images/angels2.png"/>
+<img src="Resources/Images/angels3.png"/>
 Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story.  
 
 ## Building a Text Generator Model
