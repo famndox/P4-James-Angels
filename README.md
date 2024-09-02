@@ -82,22 +82,24 @@ Understanding BERT and GPT-2: This project provided valuable insights into the s
 ## Folk Tales Sentiment Analysis
 
 #### Scope
-We aimed to explore the emotional tone and subjective nature of folk tales from various cultures around the world. By utilizing natural language processing (NLP) techniques, this part of the project analyzes the sentiment (polarity) and subjectivity of each tale. This analysis offers insights into the cultural storytelling traditions and the emotional impact of these stories, helping to uncover the common themes and differences across different nations' folk narratives.
+We aimed to explore the emotional tone and subjective nature of folk tales from various cultures around the world. By utilizing natural language processing (NLP) techniques, this part of the project analyzes the sentiment (polarity) and subjectivity of each tale. This analysis offers insights into the cultural storytelling traditions and the emotional impact of these stories, helping to uncover the common themes and differences across different nations' folk narratives. Minor data clean up and sentiment analysis was performed in Jupyter Notebook. File folk_tales_sentiment_analysis was used for PowerBI visualizations. 
 
 - File Folder: Sentiment Files
 - Resource Used: <a href='https://www.kaggle.com/datasets/andrzejpanczenko/folk-tales-dataset'>Andrzej Panczenko on Kaggle</a>
 - Libraries imported: langdetect, wordcloud, seaborn, textblob, pycountry, pandas and matplotlib.pyplot
 
 #### Findings
--	1. Nations and Stories Classification
-The notebook classifies folk tales by their nation of origin. Classification allows for cultural comparisons and understanding the diversity of sentiment across different folk traditions.
-	2. The sentiment analysis outputs provide the polarity and subjectivity of various folk tales. Polarity ranges from -1 (negative sentiment) to 1 (positive sentiment), while subjectivity indicates the degree to which the text is subjective or objective.
-For instance, the tale "Momotaro" from Japan has a positive polarity of approximately 0.24 and a moderate subjectivity of 0.45. This suggests that the story is somewhat positive and moderately subjective.
-	3. Data Table Summaries: 
-The data tables in the notebook contain columns such as source, nation, title, text, polarity, and subjectivity. These tables summarize the key attributes of the folk tales analyzed, including their emotional tone and the degree of personal opinion or factual content.
-	4. Polarity and Subjectivity Trends:
-The summary outputs highlight patterns in polarity and subjectivity across different nations. This can be significant for understanding the emotional and narrative styles prevalent in folk tales from different cultures.
-	5. Overall Significance:
+-	1. Sentiment Analysis and Aggregation by Language: 
+The segment of code performed sentiment analysis on the folktakes dataset by calculating the polarity and subjectivity for each tale, then grouped the data by nation to compute the average sentiment scores, and finally sorted the nations by their average polarity for review.
+![image](https://github.com/user-attachments/assets/50728a60-9f47-487d-b1c8-060aee49c079)
+-	2. Nations and Stories Classification
+The notebook classifies folk tales by their nation of origin. Classification allows for cultural comparisons and understanding the diversity of sentiment across different folk traditions. There are a total of 56 languages and 1 nation.
+![image](https://github.com/user-attachments/assets/e93d28f8-6ae9-4cc5-bce0-44cab612b553)
+-	3.  Polarity and Subjectivity Trends: The sentiment analysis outputs provide the polarity and subjectivity of various folk tales. Polarity ranges from -1 (negative sentiment) to 1 (positive sentiment), while subjectivity indicates the degree to which the text is subjective (higher scores) or objective (lower scores). Majority of nations have similar averages of polarity but by examining the error bars, there is wide variation of polarity between different languages. Greek folktales had the largest variance of polarity, ranging from .78 to .97. On the other hand, folktakles by languages have less variation in subjectivity between languages but majority of languages have a wide range of variance within each of their own folktales, leading to the assumption that folktales within the same cultures are a mix of objective and subjective tales.
+![image](https://github.com/user-attachments/assets/f2f376e1-b67f-4cf5-b37a-ae3c40809548)
+-	4. Correlational Observation: The scatter plot shows a positive correlation between average polarity (sentiment) and average subjectivity by language. The trend line suggests that languages with more subjective storytelling tend to have more positive sentiment on average. Hawaiian and Jewish languages stand out as outliers, with Hawaiian language showing high positivity and low subjectivity, and Jewish showing high subjectivity with moderate positivity, these outliers indicate unique storytelling styles in these cultures.
+![image](https://github.com/user-attachments/assets/53f9a64b-0134-4977-a0e3-334b53ee5962)
+ 	6. Overall Significance:
 The analysis in this notebook provides insights into the emotional and subjective nature of folk tales from various cultures. By classifying and analyzing these tales, the project sheds light on cultural storytelling traditions and their emotional impact.
 
 ## Tableau
