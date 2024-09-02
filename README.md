@@ -31,16 +31,16 @@ The idea is large, and compiling takes time, so we’ve consolidated a few datas
 
 #### Model Progression
 
-We began with SCRATCH, which was an attempt at this <a href='https://www.tensorflow.org/text/tutorials/text_generation'>TensorFlow Tutorial</a>, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   
-* <img src="Resources/Images/scratch_acc.png"/><img src="Resources/Images/scratch_one_step.png"/>
+* We began with SCRATCH, which was an attempt at this <a href='https://www.tensorflow.org/text/tutorials/text_generation'>TensorFlow Tutorial</a>, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   
+	* <img src="Resources/Images/scratch_acc.png"/><img src="Resources/Images/scratch_one_step.png"/>
 SCRATCH_FOLK was an attempt to modify the RNN training loop and use the largest dataset, which yielded the same result.
-* <img src="Resources/Images/tbd.png"/>
-In SCRATCHING, we’re fitting our Grimm dataset into <a href='https://gist.github.com/karpathy/d4dee566867f8291f086'>Andrej Karpathy's Minimal character-level Vanilla RNN</a> model, which was what the first tutorial was ultimately based on. Scratching_folk was the same attempt using the more substantial training set. The generation results of this model are still nonsense, but at least some of our keywords are showing up consistently.
-* <img src="Resources/Images/sing_f_850k.png"/>
-* <img src="Resources/Images/sing_f_900k.png"/>
+	* * <img src="Resources/Images/tbd.png"/>
+* In SCRATCHING, we’re fitting our Grimm dataset into <a href='https://gist.github.com/karpathy/d4dee566867f8291f086'>Andrej Karpathy's Minimal character-level Vanilla RNN</a> model, which was what the first tutorial was ultimately based on. Scratching_folk was the same attempt using the more substantial training set. The generation results of this model are still nonsense, but at least some of our keywords are showing up consistently.
+	* <img src="Resources/Images/sing_f_850k.png"/>
+	* <img src="Resources/Images/sing_f_900k.png"/>
 
 The best logged result came from *our* SCRATCHING model using the Grimm dataset (towards the m’th iterations). Not bad for a little next character predictor, but it looks like we're going to need to lean on something pre-trained. 
-* <img src="Resources/Images/sing_best.png"/>
+	* <img src="Resources/Images/sing_best.png"/>
   
 ## Leveraging BERT and GPT-2 for Emotional Analysis and Text Generation
 
