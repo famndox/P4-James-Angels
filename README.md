@@ -15,14 +15,14 @@ For the scale of this project, we're sampling folktales and brief myths; nothing
 	6. Native American, Norse, Japanese, Babylonian, Hebrew, Maori…
 *  "Medium" collection of Brothers Grimm
 	1. Courtesy of: <a href='https://www.cs.cmu.edu/'>Carnegie Mellon University</a> via <a href='https://hub.packtpub.com/tensorflow-lstm-that-writes-stories-tutorial/'>>packt<hub</a>
-	2. Transformation: see Artifacts for rip and zip scripts
+	2. Transformation: see [/scripts/Artifacts](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/Artifacts.ipynb) for rip and zip scripts
 	3. Number of Stories: 100
 	4. Char Count: 914271
 	5. Format: .txt
 	6. Cultures: Germanic
 *  "Large" collection of folklore
 	1. Courtesy of: <a href='https://www.kaggle.com/datasets/andrzejpanczenko/folk-tales-dataset'>Andrzej Panczenko on Kaggle</a>
-	2. Transformation: see Artifacts data manipulation scripts
+	2. Transformation: see [/scripts/Artifacts](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/Artifacts.ipynb) for data manipulation scripts
 	3. Number of Stories: 2838
 	4. Char Count: 25797400
 	5. Format: .csv, .txt, and .xlsx (for Tableau)
@@ -32,14 +32,14 @@ For the scale of this project, we're sampling folktales and brief myths; nothing
 
 Our recent utility of TensorFlow led us to a tutorial of an RNN model which began our journey. Several attempts were made using our smallest datasets to effectively use TF and Keras to train on varying RNN loops, and an LSTM (not appearing in this summary), before increasing the training set size. This is our journey in an attempt to create a "next-char-precition" model:
 
-* We began with SCRATCH, which was an attempt at this <a href='https://www.tensorflow.org/text/tutorials/text_generation'>TensorFlow Tutorial</a>, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   
+* We began with [/scripts/scratch](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratch.ipynb), which was an attempt at this <a href='https://www.tensorflow.org/text/tutorials/text_generation'>TensorFlow Tutorial</a>, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   
 	* <img src="Resources/Images/scratch_acc.png"/>
  	* <img src="Resources/Images/scratch_one_step.png"/>
-* SCRATCH_FOLK was an attempt to modify the RNN training loop and use the largest dataset, which yielded the same result.
+* [/scripts/scratch_folk](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratch_folk.ipynb) was an attempt to modify the RNN training loop and use the largest dataset, which yielded the same result.
 	* <img src="Resources/Images/tbd.png"/>
-* In SCRATCHING, we’re fitting our Grimm dataset into <a href='https://gist.github.com/karpathy/d4dee566867f8291f086'>Andrej Karpathy's Minimal character-level Vanilla RNN</a> model, which was what the first tutorial was ultimately based on.
+* In [/scripts/scratching](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratching.ipynb), we’re fitting our Grimm dataset into <a href='https://gist.github.com/karpathy/d4dee566867f8291f086'>Andrej Karpathy's Minimal character-level Vanilla RNN</a> model, which was what the first tutorial was ultimately based on.
 	* <img src="Resources/Images/sing_best.png"/>
-* Scratching_folk was the same attempt using the more substantial training set. The generation results of this model are still nonsense, but at least some of our keywords are showing up consistently.
+* [/scripts/scratching_folk](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratching_folk.ipynb) was the same attempt using the more substantial training set. The generation results of this model are still nonsense, but at least some of our keywords are showing up consistently.
 	* <img src="Resources/Images/sing_f_850k.png"/>
 	* <img src="Resources/Images/sing_f_900k.png"/>
 
@@ -52,18 +52,19 @@ Notes on notebooks: *the known good tutorial based models used in this narrative
 
  
 #### Scope
-We attempted to fine tune the following pre-trained models to both provide a sentiment analysis and generate a story from our larger collection of folk stories. We were able to complete the analysis and 12 epochs of training, in about 20 hours, running /scripts/pt_bert_bot.ipynb on a local cpu (jupyterlab + tensorflow).  
+We attempted to fine tune the following pre-trained models to both provide a sentiment analysis and generate a story from our larger collection of folk stories. We were able to complete the analysis and 12 epochs of training, in about 20 hours, running [/scripts/pt_bert_bot](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/pt_bert_bot.ipynb)
+ on a local cpu (jupyterlab + tensorflow).  
 * Hugging Face
-	* Sentiment Analysis: Utilize BERT to analyze the emotional content of a collection of folk tales.
-	* Story Generation: Leverage GPT-2 to generate new stories based on the dominant sentiment identified in the input text.
+	* Sentiment Analysis: Utilize <a href='https://huggingface.co/docs/transformers/en/model_doc/bert'>BERT</a> to analyze the emotional content of a collection of folk tales.
+	* Story Generation: Leverage <a href='https://huggingface.co/openai-community/gpt2'>GPT-2</a> to generate new stories based on the dominant sentiment identified in the input text.
 * Challenges: Address the limitations of working within free computational resources while attempting to produce high-quality, machine-generated stories.
 
 #### Project Workflow
--	1. Sentiment Analysis with BERT:
+-	1. Sentiment Analysis with <a href='https://huggingface.co/docs/transformers/en/model_doc/bert'>BERT</a>:
 We began by feeding a dataset of folk tales into BERT, a model known for its deep understanding of language nuances. 		
 The model was tasked with categorizing each story based on its emotional tone into one of five categories: "very negative," "negative," "neutral," "positive," and "very positive."
 The analysis results allowed us to identify the most prevalent sentiment in the dataset.
- 	2. Story Generation with GPT-2:
+ 	2. Story Generation with <a href='https://huggingface.co/openai-community/gpt2'>GPT-2</a>:
 Using the dominant sentiment as a foundation, we crafted a prompt to feed into GPT-2, a model designed for generating text.
 The GPT-2 tokenizer converted the prompt into tokens that the model could process.
 Parameters such as beam search and no_repeat_ngram_size were fine-tuned to optimize the output and reduce repetition, aiming to generate a coherent and unique story.
@@ -98,18 +99,14 @@ The analysis in this notebook provides insights into the emotional and subjectiv
 ## Tableau
 
 
-## References
-
-<a href='https://link_sample'>Copy Me</a>
-
-<a href=''>Copy Me</a>
-[/scripts/Artifacts](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/Artifacts.ipynb)
-[/scripts/scratching_folk](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratching_folk.ipynb)
-[/scripts/scratching](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratching.ipynb)
-[/scripts/scratch](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratch.ipynb)
-[/scripts/pt_bert_bot](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/pt_bert_bot.ipynb)
-
+## Additional References
+<a href=''>Kaggle</a>
+<a href=''>Kaggle</a>
+<a href=''>Kaggle</a>
+<a href=''>Kaggle</a>
+<a href=''>Kaggle</a>
+<a href=''>Kaggle</a>
 
 ---
 
-see gdoc for notes
+
