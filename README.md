@@ -46,10 +46,10 @@ Our recent utility of TensorFlow led us to a tutorial of an RNN model which bega
 The best logged result came from *our* SCRATCHING model using the Grimm dataset (towards the m’th iterations). Not bad for a little next character predictor, but it looks like we're going to need to lean on something pre-trained. 
 
 Notes on notebooks: 
-	- *the known good tutorial based models used in this narrative are those that can be found in /scripts*
-	- *original, but not necessarily current, and separate notebooks documenting our 'from-scratch' models' beginnings can be found in /scripts/xPlor*
-	- *the same collection of 'pre-trained' models used in the next section can be found in .virtuatl_documents/just_exploring*
-	- *eg. the pt_bert_bot notebook referenced below was derived from Project_4_BERT.ipynb, sans the learning rate config*
+- *the known good tutorial based models used in this narrative are those that can be found in /scripts*
+- *original, but not necessarily current, and separate notebooks documenting our 'from-scratch' models' beginnings can be found in /scripts/xPlor*
+- *the same collection of 'pre-trained' models used in the next section can be found in .virtuatl_documents/just_exploring*
+- *eg. the pt_bert_bot notebook referenced below was derived from Project_4_BERT.ipynb, sans the learning rate config*
 	
   
 ## Leveraging BERT and GPT-2 for Emotional Analysis and Text Generation
