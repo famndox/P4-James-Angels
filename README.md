@@ -45,7 +45,11 @@ Our recent utility of TensorFlow led us to a tutorial of an RNN model which bega
 
 The best logged result came from *our* SCRATCHING model using the Grimm dataset (towards the m’th iterations). Not bad for a little next character predictor, but it looks like we're going to need to lean on something pre-trained. 
 
-Notes on notebooks: *the known good tutorial based models used in this narrative are those that can be found in /scripts. original, but not necessarily current, and separate notebooks documenting our 'from-scratch' models explorations can be found in /scripts/xPlor and .virtuatl_documents/just_exploring for 'pre-trained' models used in the next section. the pt_bert_bot notebook referenced below was derived from Project_4_BERT.ipynb though the learning rate config didn't make it into the 12 epoch version.*
+	Notes on notebooks: 
+	- *the known good tutorial based models used in this narrative are those that can be found in /scripts*
+	- *original, but not necessarily current, and separate notebooks documenting our 'from-scratch' models' beginnings can be found in /scripts/xPlor*
+	- *the same collection of 'pre-trained' models used in the next section can be found in .virtuatl_documents/just_exploring*
+	- *eg. the pt_bert_bot notebook referenced below was derived from Project_4_BERT.ipynb, sans the learning rate config*
 	
   
 ## Leveraging BERT and GPT-2 for Emotional Analysis and Text Generation
@@ -54,7 +58,7 @@ Notes on notebooks: *the known good tutorial based models used in this narrative
 #### Scope
 We attempted to fine tune the following pre-trained models to both provide a sentiment analysis and generate a story from our larger collection of folk stories. We were able to complete the analysis and 12 epochs of training, in about 20 hours, running [/scripts/pt_bert_bot](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/pt_bert_bot.ipynb)
  on a local cpu (jupyterlab + tensorflow).  
-* Hugging Face
+* Hugging Face Models:
 	* Sentiment Analysis: Utilize <a href='https://huggingface.co/docs/transformers/en/model_doc/bert'>BERT</a> to analyze the emotional content of a collection of folk tales.
 	* Story Generation: Leverage <a href='https://huggingface.co/openai-community/gpt2'>GPT-2</a> to generate new stories based on the dominant sentiment identified in the input text.
 * Challenges: Address the limitations of working within free computational resources while attempting to produce high-quality, machine-generated stories.
