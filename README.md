@@ -1,4 +1,4 @@
-<img src="Resources/Images/angels3.png"/>
+<img src="Resources/Images/angels4.png"/>
 
 ###### Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story.  
 
