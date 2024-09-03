@@ -87,6 +87,11 @@ Understanding BERT and GPT-2: This project provided valuable insights into the s
 #### Best Results
 * From [/scripts/pt_bert_bot](https://nbviewer.org/github/famndox/P4-James-Angels/blob/main/Scripts/pt_bert_bot.ipynb):
 	* <img src="Resources/Images/gpt_triple_devil.png"/>
+ 	Input prompts are highlighted in these screenshots to distinguish input from generation.
+ 	* <img src="Resources/Images/pt_add_1.png"/>
+   	* <img src="Resources/Images/pt_add_2.png"/>
+     	* <img src="Resources/Images/pt_add_3.png"/>
+       	* <img src="Resources/Images/pt_add_4.png"/>
  * From [/scripts/P4_BERT_FINAL_Google_Colab](https://nbviewer.org/github/famndox/P4-James-Angels/blob/main/Scripts/P4_BERT_FINAL_Google_Colab.ipynb):
  	* <img src="Resources/Images/Final_BERT_Google_Colab_Result.png"/>
   	Oddly enough, although the majority of the training stories were positive, the results yielded a story considered to be very negative.
