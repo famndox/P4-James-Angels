@@ -1,6 +1,6 @@
 <img src="Resources/Images/angels4.png"/>
 
-<center>  ###### Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story.  </center>
+###### <center> Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story. </center>
 
 ## Building a Text Generator Model
 
