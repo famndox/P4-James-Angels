@@ -72,7 +72,7 @@ We attempted to fine tune the following pre-trained models to both provide a sen
 We began by feeding a dataset of folk tales into BERT, a model known for its deep understanding of language nuances. 		
 The model was tasked with categorizing each story based on its emotional tone into one of five categories: "very negative," "negative," "neutral," "positive," and "very positive."
 The analysis results allowed us to identify the most prevalent sentiment in the dataset.
-	<img src="Resources/Images/Final_BERT_Sentiment_Analysis_Result"/>
+	<img src="Resources/Images/Final_BERT_Sentiment_Analysis_Result.png"/>
  	3. Story Generation with <a href='https://huggingface.co/openai-community/gpt2'>GPT-2</a>:
 Using the dominant sentiment as a foundation, we crafted a prompt to feed into GPT-2, a model designed for generating text.
 The GPT-2 tokenizer converted the prompt into tokens that the model could process.
@@ -88,7 +88,7 @@ Understanding BERT and GPT-2: This project provided valuable insights into the s
 * From pt_bert_bot
 	* <img src="Resources/Images/gpt_triple_devil.png"/>
  * From P4_BERT_FINAL_Google_Colab
- 	* <img src="Resources/Images/Final_BERT_Google_Colab_Result"/>
+ 	* <img src="Resources/Images/Final_BERT_Google_Colab_Result.png"/>
 
 ## Folk Tales Sentiment Analysis
 
