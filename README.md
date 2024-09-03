@@ -1,6 +1,6 @@
 <img src="Resources/Images/angels4.png"/>
 
-###### Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story.  
+<center>  ###### Consider the irony of using machine learning to interpret humanity’s Mythopoeic Corpus, our many cultural tales, to reimagine a common human story.  </center>
 
 ## Building a Text Generator Model
 
@@ -34,7 +34,7 @@ For the scale of this project, we're sampling folktales and brief myths; nothing
 Our recent utility of TensorFlow led us to a tutorial of an RNN model which began our journey. Several attempts were made using our smallest datasets to effectively use TF and Keras to train on varying RNN loops, and an LSTM (not appearing in this summary), before increasing the training set size. This is our journey in an attempt to create a "next-char-precition" model:
 
 * We began with [/scripts/scratch](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratch.ipynb), which was an attempt at this <a href='https://www.tensorflow.org/text/tutorials/text_generation'>TensorFlow Tutorial</a>, using our smallest dataset. As you can see, the accuracy of 100 epochs was solidly at 98%, but our results were nonsensical.   
-	* <img src="Resources/Images/scratch_acc.png"/>
+	 <img src="Resources/Images/scratch_acc.png"/>
  	* <img src="Resources/Images/scratch_one_step.png"/>
 * [/scripts/scratch_folk](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratch_folk.ipynb) was an attempt to modify the RNN training loop and use the largest dataset, which yielded the same result.
 	* <img src="Resources/Images/tbd.png"/>
