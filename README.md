@@ -61,7 +61,7 @@ We attempted to fine tune the following pre-trained models to both provide a sen
 * Workbooks:
 	* /scripts/pt_bert_bot: was able to complete the analysis and 12 epochs of training, in about 20 hours, running 
  on a local cpu (jupyterlab + tensorflow)
-	* /scripts/AMBERS_CODE_HERE ...
+	* /scripts/P4_BERT_FINAL_Google_Colab Was able to complete the analysis of 15 epochs of training, in about 2 hours, running on Google Colab.
 * Hugging Face Models:
 	* Sentiment Analysis: Utilize <a href='https://huggingface.co/docs/transformers/en/model_doc/bert'>BERT</a> to analyze the emotional content of a collection of folk tales.
 	* Story Generation: Leverage <a href='https://huggingface.co/openai-community/gpt2'>GPT-2</a> to generate new stories based on the dominant sentiment identified in the input text.
