@@ -51,9 +51,8 @@ Notes on notebooks:
 - *original, but not necessarily current, and separate notebooks documenting our 'from-scratch' models' beginnings can be found in /scripts/xPlor*
 - *the same collection of 'pre-trained' models used in the next section can be found in .virtuatl_documents/just_exploring*
 - *eg. the pt_bert_bot notebook referenced below was derived from Project_4_BERT.ipynb, sans the learning rate config*
-	
-[/scripts/pt_bert_bot](https://nbviewer.org/github/famndox/P4-James-Angels/blob/main/Scripts/pt_bert_bot.ipynb)
-[/scripts/P4_BERT_FINAL_Google_Colab](https://nbviewer.org/github/famndox/P4-James-Angels/blob/main/Scripts/P4_BERT_FINAL_Google_Colab.ipynb)
+
+ 
 ## Leveraging BERT and GPT-2 for Emotional Analysis and Text Generation
 
  
