@@ -141,7 +141,7 @@ The aim was to use language models to identify key words that may appear in both
 
 	* ![Screen Shot 2024-09-02 at 2 42 17 PM](https://github.com/user-attachments/assets/6c4c2f6b-860f-4045-b3d8-409cb673d4b6)
 
-4. Select Folk Word(s) by Nation: bubble charts that depicts the occurrences of all or specific words in relation to the nation.
+4. Select Folk Word(s) by Nation: bubble charts that depicts the occurrences of all or specific words in relation to the nation. Found in the "reshaped_nation" excel file. 
     
 
 	* ![Screen Shot 2024-09-02 at 2 42 29 PM](https://github.com/user-attachments/assets/c39512d5-535f-4ab7-9c53-64cf0a2478c1)
