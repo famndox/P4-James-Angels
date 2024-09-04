@@ -11,21 +11,21 @@ For the scale of this project, we're sampling folktales and brief myths; nothing
 	1. Courtesy of: Freely hosted, take a look using a <a href='https://railsback.org/CS/CSIndex.html'>Web View</a> or see the exact <a href='https://superpowerexperts.com/wp-content/uploads/2019/06/Creation-Stories-from-around-the-World.pdf'>PDF Link Used</a>
 	2. Transformation: manual
 	3. Number of Stories: 20
-	4. Char Count: 94504 
+	4. Char Count: 94,504 
 	5. Format: .csv and .txt 
 	6. Native American, Norse, Japanese, Babylonian, Hebrew, Maori…
 *  "Medium" collection of Brothers Grimm
 	1. Courtesy of: <a href='https://www.cs.cmu.edu/'>Carnegie Mellon University</a> via <a href='https://hub.packtpub.com/tensorflow-lstm-that-writes-stories-tutorial/'>>packt<hub</a>
 	2. Transformation: see [/scripts/Artifacts](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/Artifacts.ipynb) for rip and zip scripts
 	3. Number of Stories: 100
-	4. Char Count: 914271
+	4. Char Count: 914,271
 	5. Format: .txt
 	6. Cultures: Germanic
 *  "Large" collection of folklore
 	1. Courtesy of: <a href='https://www.kaggle.com/datasets/andrzejpanczenko/folk-tales-dataset'>Andrzej Panczenko on Kaggle</a>
 	2. Transformation: see [/scripts/Artifacts](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/Artifacts.ipynb) for data manipulation scripts
 	3. Number of Stories: 2838
-	4. Char Count: 25797400
+	4. Char Count: 25,797,400
 	5. Format: .csv, .txt, and .xlsx (for Tableau)
 	6. Cultures: 65 referenced from Albanian to Zimbabwean
 
