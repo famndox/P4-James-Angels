@@ -37,7 +37,7 @@ Our recent utility of TensorFlow led us to a tutorial of an RNN model which bega
 	* <img src="Resources/Images/scratch_acc.png"/>
  	* <img src="Resources/Images/scratch_one_step.png"/>
 * [/scripts/scratch_folk](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratch_folk.ipynb) was an attempt to modify the RNN training loop and use the largest dataset, which yielded the same result.
-	* <img src="Resources/Images/tbd.png"/>
+	* <img src="Resources/Images/scratch_folk.png"/>
 * In [/scripts/scratching](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratching.ipynb), we’re fitting our Grimm dataset into <a href='https://gist.github.com/karpathy/d4dee566867f8291f086'>Andrej Karpathy's Minimal character-level Vanilla RNN</a> model, which was what the first tutorial was ultimately based on.
 	* <img src="Resources/Images/sing_best.png"/>
 * [/scripts/scratching_folk](https://nbviewer.jupyter.org/github/famndox/P4-James-Angels/blob/main/Scripts/scratching_folk.ipynb) was the same attempt using the more substantial training set. The generation results of this model are still nonsense, but at least some of our keywords are showing up consistently.
